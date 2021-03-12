@@ -1,0 +1,22 @@
+const jwt = require('jsonwebtoken');
+const NotAuthorizedError = require('../errors/not-authorized-error');
+
+const currentUser = (req, res, next) => {
+    if (!req.session || !req.session.jwt) {
+        return next();
+    }
+
+    try {
+        const payload = jwt.verify(
+            req.session.jwt,
+            process.env.JWT_KEY
+        );
+        req.currentUser = payload;
+    } catch (err) {
+        console.log(err);
+    }
+
+    next();
+};
+
+module.exports = currentUser;
