@@ -1,5 +1,4 @@
 const jwt = require('jsonwebtoken');
-const NotAuthorizedError = require('../errors/not-authorized-error');
 
 const currentUser = (req, res, next) => {
     if (!req.session || !req.session.jwt) {

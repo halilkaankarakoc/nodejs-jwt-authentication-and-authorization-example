@@ -15,13 +15,8 @@ const userSchema = new mongoose.Schema(
             type: String,
             enum: ['standard', 'admin']
         },
-        channel: {
-            type: String,
-            enum: ['local', 'google']
-        },
         level: {
-            type: Number,
-            enum: [0, 1, 2, 3, 4, 5]
+            type: Number
         }
     },
     {
