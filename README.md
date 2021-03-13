@@ -6,7 +6,7 @@ API that implements authentication and authorization using nodejs, express, jwt 
 
 You can create a new user (`signup`), try `signin` and `signout` features. Also you can try access to protected routes `protectedRoute1`, `protectedRoute2`, `userUpgrade`, `levelUpgarade`.
 
-For example when you try to access `user-upgrade (/api/user/:id/upgrade)` endpoint to upgrade your role from `standard` to `standard`,  you must be authenticated and also your level must be greater than or equal to 10. By default when you sign up your level is 0. To increase that level you can make a request to `update-level(/api/user/:id/level)` endpoint.
+For example when you try to access `user-upgrade (/api/user/:id/upgrade)` endpoint to upgrade your role from `standard` to `admin`,  you must be authenticated and also your level must be greater than or equal to 10. By default when you sign up your level is 0. To increase that level you can make a request to `update-level(/api/user/:id/level)` endpoint.
 
 # User Model
 
